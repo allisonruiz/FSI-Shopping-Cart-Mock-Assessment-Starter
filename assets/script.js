@@ -6,16 +6,17 @@ quantity.textContent = displayQuantity;
 }
 
 const quantDown = document.querySelector("#quantity-down")
-const quantUp = document.querySelector("quantity-up");
+const quantUp = document.querySelector("#quantity-up");
 
 
 quantDown.addEventListener('click', function(e) {
     if (quantity > 0 ) {
     quantity--;
-    updateQuantity(quantity);
+    updateQuantity(`Quantity: ${quantity}`);
 }
 });
 
 quantUp.addEventListener('click', function (e) {
     quantity++;
+    updateQuantity(`Quantity: ${quantity}`);
 });
